@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FluxAsker</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <div id="app" class="clay-container">
+    <header class="header">
+      <h1 class="title">FluxAsker</h1>
+      <p class="subtitle">AI-Powered YouTube Q&A</p>
+    </header>
+    
+    <main class="main-content">
+      <div id="status-area" class="clay-card">
+        <p id="status-text">Initialize extension on a YouTube video.</p>
+        <button id="process-btn" class="clay-btn primary-btn">Process Video</button>
+      </div>
+
+      <div id="chat-area" class="chat-container clay-card hidden">
+        <div id="messages" class="messages-list"></div>
+        <div class="input-area">
+          <input type="text" id="query-input" class="clay-input" placeholder="Ask a question about this video..." />
+          <button id="send-btn" class="clay-btn">Send</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="./src/popup.js"></script>
+</body>
+</html>
