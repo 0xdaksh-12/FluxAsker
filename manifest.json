@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "FluxAsker",
+    "version": "1.0.0",
+    "description": "AI-Powered YouTube Q&A Chrome Extension using Groq and Local RAG",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "host_permissions": [
+      "https://*.youtube.com/*"
+    ],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "background": {
+      "service_worker": "src/background.js",
+      "type": "module"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["src/content.js"]
+      }
+    ]
+}
